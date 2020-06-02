@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Astronomer_s_Handbook.Constellation" Collapsed="true">
+    <Position X="11.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAEBAEAAAAAAQAAAAAAAAACAAAABEAAAA=</HashCode>
+      <FileName>Constellation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Astronomer_s_Handbook.Coordinate" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABBAAAIEwACABgAAAAIAAIACAAABAAACAyA=</HashCode>
+      <FileName>Coordinates\Coordinate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Astronomer_s_Handbook.FormEditConstellation" Collapsed="true">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AWAAECAAAKAAwACABAGBBigSABCAACAFAQAIADEAAwA=</HashCode>
+      <FileName>Forms\FormEditConstellation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Astronomer_s_Handbook.FormEditStar" Collapsed="true">
+    <Position X="9.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASEgBABAAKIAwCGAhCCRBqQSANCdAyAAAQAICBEABxA=</HashCode>
+      <FileName>Forms\FormEditStar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Astronomer_s_Handbook.FormMain" Collapsed="true">
+    <Position X="8.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RBICaAYIAGAkQhEAFESIIAACAYAAwKKECAA7JTAjAQA=</HashCode>
+      <FileName>Forms\FormMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Astronomer_s_Handbook.FormViewConstellation" Collapsed="true">
+    <Position X="7.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BUAQAAAAACAAQAAQAAGgAAAiABCgCAABAEAoIBEAAgA=</HashCode>
+      <FileName>Forms\FormViewConstellation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Astronomer_s_Handbook.FormViewStar" Collapsed="true">
+    <Position X="9.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hQAwAAAAECIAQBEQACCQggYiAJG/CQAAAEgIIBEAAhA=</HashCode>
+      <FileName>Forms\FormViewStar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Astronomer_s_Handbook.Human" Collapsed="true">
+    <Position X="11.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAEAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Human.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Astronomer_s_Handbook.Sky" Collapsed="true">
+    <Position X="11.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAgAACAAAAAAAgAAAAA=</HashCode>
+      <FileName>Sky.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Astronomer_s_Handbook.Star" Collapsed="true">
+    <Position X="11.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABCAAAAAAAAAEAAFAAIAAAQAAAAAAABACCAAAAEAAAA=</HashCode>
+      <FileName>Star.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Astronomer_s_Handbook.Editor">
+    <Position X="14.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAABAAAAIAAAA=</HashCode>
+      <FileName>Tools\Editor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Astronomer_s_Handbook.Filter">
+    <Position X="14.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AMEAAAAAIAAEAAAQAAADACAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tools\Filter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Astronomer_s_Handbook.IO">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAIAgAAAQAAIAAAAAA=</HashCode>
+      <FileName>Tools\IO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Astronomer_s_Handbook.Coordinates.CoordinateSystem" Collapsed="true">
+    <Position X="2.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Coordinates\CoordinateSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Astronomer_s_Handbook.Coordinates.EquatorialCS" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Coordinates\EquatorialCS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Astronomer_s_Handbook.Coordinates.GeographicCS" Collapsed="true">
+    <Position X="2.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Coordinates\GeographicCS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Astronomer_s_Handbook.Coordinates.HorizontalCord" Collapsed="true">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Coordinates\HorizontalCord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Astronomer_s_Handbook.Coordinates.HorizontalCS" Collapsed="true">
+    <Position X="5.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Coordinates\HorizontalCS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Astronomer_s_Handbook.Coordinates.VerticalCord" Collapsed="true">
+    <Position X="1.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAIAYAEAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Coordinates\VerticalCord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Astronomer_s_Handbook.AstroMath">
+    <Position X="16" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YlABAAIAQkAEQAADAAAoggEAEwAAAABAACAkAEiAAEA=</HashCode>
+      <FileName>Tools\AstroMath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
