@@ -40,8 +40,10 @@ namespace Astronomer_s_Handbook
             ConformCord(false);
 
             // Подгружаем сохранённого наблюдателя.
-            if (IO.UploadData(Properties.Resources.HumanFileName, ref human))
+            if (IO.UploadData(Properties.Resources.HumanFileName, ref human.Location))
+            {
                 SetViewHuman(human);
+            }
 
             // Заполнение выпадающего списка для фильтрации поиска.
             cBoxSortedBy.DataSource = Filter.listSortedBy;
@@ -94,7 +96,7 @@ namespace Astronomer_s_Handbook
             List<bool> res = new List<bool>();
 
             res.Add(IO.SaveData(Properties.Resources.SkyFileName, sky, false));
-            res.Add(IO.SaveData(Properties.Resources.HumanFileName, human));
+            res.Add(IO.SaveData(Properties.Resources.HumanFileName, human.Location));
 
             return res.Aggregate((seed, curr) => seed && curr);
         }
@@ -132,7 +134,7 @@ namespace Astronomer_s_Handbook
         {
             // Настройка времени.
             // dTPickerCurrDateTime.Value = human.LocalTime;
-            // Время не подгружается, а берётся текущее
+            // Время не подгружается, а берётся текущее.
 
             // Настройка координат.
             GeographicCS gcs = human.Location;
