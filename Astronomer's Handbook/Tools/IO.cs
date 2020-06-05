@@ -74,7 +74,7 @@ namespace Astronomer_s_Handbook
             // Если файл не существует, создаём его.
             if (!File.Exists($"{filename}.txt"))
                 File.Create($"{filename}.txt");
-
+            
             TextWriter writer = new StreamWriter($"{filename}.txt");
 
             // Сериализируем объект типа T в json.

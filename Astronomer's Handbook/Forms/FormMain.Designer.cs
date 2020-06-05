@@ -292,10 +292,15 @@
             this.numLongtitudeDegree.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.numLongtitudeDegree.Location = new System.Drawing.Point(73, 6);
             this.numLongtitudeDegree.Maximum = new decimal(new int[] {
-            359,
+            180,
             0,
             0,
             0});
+            this.numLongtitudeDegree.Minimum = new decimal(new int[] {
+            180,
+            0,
+            0,
+            -2147483648});
             this.numLongtitudeDegree.Name = "numLongtitudeDegree";
             this.numLongtitudeDegree.Size = new System.Drawing.Size(44, 20);
             this.numLongtitudeDegree.TabIndex = 0;

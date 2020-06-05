@@ -241,7 +241,7 @@
             this.cBoxUnit.Location = new System.Drawing.Point(310, 5);
             this.cBoxUnit.Margin = new System.Windows.Forms.Padding(5);
             this.cBoxUnit.Name = "cBoxUnit";
-            this.cBoxUnit.Size = new System.Drawing.Size(109, 26);
+            this.cBoxUnit.Size = new System.Drawing.Size(127, 26);
             this.cBoxUnit.TabIndex = 3;
             // 
             // flowLayoutPanel2

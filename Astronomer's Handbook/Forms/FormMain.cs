@@ -116,7 +116,7 @@ namespace Astronomer_s_Handbook
             human.Location.Latitude = new VerticalCord(dv, mv, sv);
 
             // Получаем горизонтальные координаты.
-            int dh = (int)numLongtitudeDegree.Value;
+            int dh = ((int)numLongtitudeDegree.Value + 360) % 360;
             int mh = (int)numLongtitudeMinutes.Value;
             int sh = (int)numLongtitudeSeconds.Value;
 
@@ -145,7 +145,11 @@ namespace Astronomer_s_Handbook
             numLatitudeMinutes.Value = lat.Minutes;
             numLatitudeSeconds.Value = lat.Seconds;
 
-            numLongtitudeDegree.Value = lon.Degrees;
+            numLongtitudeDegree.Value =
+                (lon.Degrees <= 180) 
+                ? lon.Degrees 
+                : lon.Degrees - 360;
+
             numLongtitudeMinutes.Value = lon.Minutes;
             numLongtitudeSeconds.Value = lon.Seconds;
         }
