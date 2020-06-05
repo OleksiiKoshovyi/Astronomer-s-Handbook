@@ -40,6 +40,7 @@ namespace Astronomer_s_Handbook
         private void PrepareAddForm(Sky sky)
         {
             MinimumSize = new Size(Width, 310);
+            MaximumSize = new Size(Width, 310);
             Size = MinimumSize;
             pStars.Visible = false;
             bDel.Visible = false;

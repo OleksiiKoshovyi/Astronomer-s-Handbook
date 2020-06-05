@@ -121,7 +121,7 @@ namespace Astronomer_s_Handbook
         public static bool LoadImage(string url, PictureBox pBox, 
             bool isErrorShown = true)
         {
-            if (!CheckForInternetConnection())
+            if (!CheckForInternetConnection(isErrorShown))
                 return false;
             try
             {
@@ -140,7 +140,7 @@ namespace Astronomer_s_Handbook
         /// Возвращает состояние подключения к интернету.
         /// </summary>
         /// <returns>Состояние подключения к интернету.</returns>
-        public static bool CheckForInternetConnection()
+        public static bool CheckForInternetConnection(bool isErrorShown = true)
         {
             try
             {
@@ -150,7 +150,11 @@ namespace Astronomer_s_Handbook
             }
             catch(Exception ex)
             {
-                ShowErrorMessage(ex.Message, "Отсутствует интернет-соединение");
+                if (isErrorShown)
+                {
+                    ShowErrorMessage(ex.Message, "Отсутствует интернет-соединение");
+                }
+
                 return false;
             }
         }

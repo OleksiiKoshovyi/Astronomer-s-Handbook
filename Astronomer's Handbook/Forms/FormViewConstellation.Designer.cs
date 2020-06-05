@@ -218,6 +218,7 @@
             this.Controls.Add(this.flowLPParams);
             this.Controls.Add(this.pLeft);
             this.Controls.Add(this.pHeader);
+            this.MaximumSize = new System.Drawing.Size(820, 630);
             this.MinimumSize = new System.Drawing.Size(820, 630);
             this.Name = "FormViewConstellation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

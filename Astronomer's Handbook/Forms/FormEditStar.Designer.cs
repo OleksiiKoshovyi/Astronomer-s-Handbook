@@ -456,6 +456,7 @@
             this.Controls.Add(this.flowLPParams);
             this.Controls.Add(this.pLeft);
             this.Controls.Add(this.pHeader);
+            this.MaximumSize = new System.Drawing.Size(856, 490);
             this.MinimumSize = new System.Drawing.Size(856, 490);
             this.Name = "FormEditStar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

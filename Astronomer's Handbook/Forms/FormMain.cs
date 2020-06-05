@@ -29,7 +29,7 @@ namespace Astronomer_s_Handbook
         private void PrepareForm()
         {
             // Асинхронно загружает изображение в PictureBox.
-            IO.LoadImage(Properties.Resources.UrlRightPanel, pBoxRightPanel);
+            IO.LoadImage(Properties.Resources.UrlRightPanel, pBoxRightPanel, false);
 
             sky = new Sky();
             // Подгружаем сохранённое небо.
