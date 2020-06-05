@@ -460,6 +460,7 @@
             this.Name = "FormEditStar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEditStar";
+            this.TopMost = true;
             this.pHeader.ResumeLayout(false);
             this.pHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxPhoto)).EndInit();

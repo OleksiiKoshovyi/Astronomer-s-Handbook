@@ -34,6 +34,7 @@
             this.lblTitleEdit = new System.Windows.Forms.Label();
             this.bAddConstellation = new System.Windows.Forms.Button();
             this.bAddStar = new System.Windows.Forms.Button();
+            this.bSave = new System.Windows.Forms.Button();
             this.pBoxRightPanel = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.numLatitudeSeconds = new System.Windows.Forms.NumericUpDown();
@@ -46,21 +47,20 @@
             this.lblLatitude = new System.Windows.Forms.Label();
             this.lblLongitude = new System.Windows.Forms.Label();
             this.pSearch = new System.Windows.Forms.Panel();
+            this.pFindFrom = new System.Windows.Forms.Panel();
+            this.rBOnlyStars = new System.Windows.Forms.RadioButton();
+            this.rBOnlyConstellations = new System.Windows.Forms.RadioButton();
+            this.pFilters = new System.Windows.Forms.Panel();
+            this.chBoxOnlyVisible = new System.Windows.Forms.CheckBox();
+            this.pSortedBy = new System.Windows.Forms.Panel();
+            this.lblSortedBy = new System.Windows.Forms.Label();
+            this.cBoxSortedBy = new System.Windows.Forms.ComboBox();
             this.bSearch = new System.Windows.Forms.Button();
             this.tBoxSearch = new System.Windows.Forms.TextBox();
             this.pMain = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lBoxSky = new System.Windows.Forms.ListBox();
             this.tTip = new System.Windows.Forms.ToolTip(this.components);
-            this.pSortedBy = new System.Windows.Forms.Panel();
-            this.lblSortedBy = new System.Windows.Forms.Label();
-            this.cBoxSortedBy = new System.Windows.Forms.ComboBox();
-            this.pFilters = new System.Windows.Forms.Panel();
-            this.chBoxOnlyVisible = new System.Windows.Forms.CheckBox();
-            this.pFindFrom = new System.Windows.Forms.Panel();
-            this.rBOnlyStars = new System.Windows.Forms.RadioButton();
-            this.rBOnlyConstellations = new System.Windows.Forms.RadioButton();
-            this.bSave = new System.Windows.Forms.Button();
             this.pNav.SuspendLayout();
             this.flowLPWay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxRightPanel)).BeginInit();
@@ -72,10 +72,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numLongtitudeMinutes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLongtitudeDegree)).BeginInit();
             this.pSearch.SuspendLayout();
-            this.pMain.SuspendLayout();
-            this.pSortedBy.SuspendLayout();
-            this.pFilters.SuspendLayout();
             this.pFindFrom.SuspendLayout();
+            this.pFilters.SuspendLayout();
+            this.pSortedBy.SuspendLayout();
+            this.pMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // pNav
@@ -134,6 +134,17 @@
             this.bAddStar.Text = "Создать звезду";
             this.bAddStar.UseVisualStyleBackColor = true;
             this.bAddStar.Click += new System.EventHandler(this.bAddStar_Click);
+            // 
+            // bSave
+            // 
+            this.bSave.Location = new System.Drawing.Point(5, 94);
+            this.bSave.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.bSave.Name = "bSave";
+            this.bSave.Size = new System.Drawing.Size(220, 29);
+            this.bSave.TabIndex = 12;
+            this.bSave.Text = "Сохранить все изменения";
+            this.bSave.UseVisualStyleBackColor = true;
+            this.bSave.Click += new System.EventHandler(this.bSave_Click);
             // 
             // pBoxRightPanel
             // 
@@ -329,6 +340,88 @@
             this.pSearch.Size = new System.Drawing.Size(886, 52);
             this.pSearch.TabIndex = 0;
             // 
+            // pFindFrom
+            // 
+            this.pFindFrom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pFindFrom.Controls.Add(this.rBOnlyStars);
+            this.pFindFrom.Controls.Add(this.rBOnlyConstellations);
+            this.pFindFrom.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pFindFrom.Location = new System.Drawing.Point(366, 0);
+            this.pFindFrom.Name = "pFindFrom";
+            this.pFindFrom.Size = new System.Drawing.Size(180, 50);
+            this.pFindFrom.TabIndex = 8;
+            // 
+            // rBOnlyStars
+            // 
+            this.rBOnlyStars.AutoSize = true;
+            this.rBOnlyStars.Location = new System.Drawing.Point(108, 17);
+            this.rBOnlyStars.Name = "rBOnlyStars";
+            this.rBOnlyStars.Size = new System.Drawing.Size(64, 17);
+            this.rBOnlyStars.TabIndex = 1;
+            this.rBOnlyStars.Text = "Звёзды";
+            this.rBOnlyStars.UseVisualStyleBackColor = true;
+            // 
+            // rBOnlyConstellations
+            // 
+            this.rBOnlyConstellations.AutoSize = true;
+            this.rBOnlyConstellations.Checked = true;
+            this.rBOnlyConstellations.Location = new System.Drawing.Point(12, 16);
+            this.rBOnlyConstellations.Name = "rBOnlyConstellations";
+            this.rBOnlyConstellations.Size = new System.Drawing.Size(80, 17);
+            this.rBOnlyConstellations.TabIndex = 0;
+            this.rBOnlyConstellations.TabStop = true;
+            this.rBOnlyConstellations.Text = "Созвездия";
+            this.rBOnlyConstellations.UseVisualStyleBackColor = true;
+            // 
+            // pFilters
+            // 
+            this.pFilters.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pFilters.Controls.Add(this.chBoxOnlyVisible);
+            this.pFilters.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pFilters.Location = new System.Drawing.Point(546, 0);
+            this.pFilters.Name = "pFilters";
+            this.pFilters.Size = new System.Drawing.Size(130, 50);
+            this.pFilters.TabIndex = 7;
+            // 
+            // chBoxOnlyVisible
+            // 
+            this.chBoxOnlyVisible.AutoSize = true;
+            this.chBoxOnlyVisible.Location = new System.Drawing.Point(12, 17);
+            this.chBoxOnlyVisible.Name = "chBoxOnlyVisible";
+            this.chBoxOnlyVisible.Size = new System.Drawing.Size(112, 17);
+            this.chBoxOnlyVisible.TabIndex = 0;
+            this.chBoxOnlyVisible.Text = "Только видимые";
+            this.chBoxOnlyVisible.UseVisualStyleBackColor = true;
+            // 
+            // pSortedBy
+            // 
+            this.pSortedBy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pSortedBy.Controls.Add(this.lblSortedBy);
+            this.pSortedBy.Controls.Add(this.cBoxSortedBy);
+            this.pSortedBy.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pSortedBy.Location = new System.Drawing.Point(676, 0);
+            this.pSortedBy.Name = "pSortedBy";
+            this.pSortedBy.Size = new System.Drawing.Size(208, 50);
+            this.pSortedBy.TabIndex = 6;
+            // 
+            // lblSortedBy
+            // 
+            this.lblSortedBy.AutoSize = true;
+            this.lblSortedBy.Location = new System.Drawing.Point(3, 18);
+            this.lblSortedBy.Name = "lblSortedBy";
+            this.lblSortedBy.Size = new System.Drawing.Size(67, 13);
+            this.lblSortedBy.TabIndex = 5;
+            this.lblSortedBy.Text = "Сортировка";
+            // 
+            // cBoxSortedBy
+            // 
+            this.cBoxSortedBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBoxSortedBy.FormattingEnabled = true;
+            this.cBoxSortedBy.Location = new System.Drawing.Point(76, 14);
+            this.cBoxSortedBy.Name = "cBoxSortedBy";
+            this.cBoxSortedBy.Size = new System.Drawing.Size(121, 21);
+            this.cBoxSortedBy.TabIndex = 0;
+            // 
             // bSearch
             // 
             this.bSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -393,99 +486,6 @@
             // 
             this.tTip.IsBalloon = true;
             // 
-            // pSortedBy
-            // 
-            this.pSortedBy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pSortedBy.Controls.Add(this.lblSortedBy);
-            this.pSortedBy.Controls.Add(this.cBoxSortedBy);
-            this.pSortedBy.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pSortedBy.Location = new System.Drawing.Point(676, 0);
-            this.pSortedBy.Name = "pSortedBy";
-            this.pSortedBy.Size = new System.Drawing.Size(208, 50);
-            this.pSortedBy.TabIndex = 6;
-            // 
-            // lblSortedBy
-            // 
-            this.lblSortedBy.AutoSize = true;
-            this.lblSortedBy.Location = new System.Drawing.Point(3, 18);
-            this.lblSortedBy.Name = "lblSortedBy";
-            this.lblSortedBy.Size = new System.Drawing.Size(67, 13);
-            this.lblSortedBy.TabIndex = 5;
-            this.lblSortedBy.Text = "Сортировка";
-            // 
-            // cBoxSortedBy
-            // 
-            this.cBoxSortedBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cBoxSortedBy.FormattingEnabled = true;
-            this.cBoxSortedBy.Location = new System.Drawing.Point(76, 14);
-            this.cBoxSortedBy.Name = "cBoxSortedBy";
-            this.cBoxSortedBy.Size = new System.Drawing.Size(121, 21);
-            this.cBoxSortedBy.TabIndex = 0;
-            // 
-            // pFilters
-            // 
-            this.pFilters.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pFilters.Controls.Add(this.chBoxOnlyVisible);
-            this.pFilters.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pFilters.Location = new System.Drawing.Point(546, 0);
-            this.pFilters.Name = "pFilters";
-            this.pFilters.Size = new System.Drawing.Size(130, 50);
-            this.pFilters.TabIndex = 7;
-            // 
-            // chBoxOnlyVisible
-            // 
-            this.chBoxOnlyVisible.AutoSize = true;
-            this.chBoxOnlyVisible.Location = new System.Drawing.Point(12, 17);
-            this.chBoxOnlyVisible.Name = "chBoxOnlyVisible";
-            this.chBoxOnlyVisible.Size = new System.Drawing.Size(112, 17);
-            this.chBoxOnlyVisible.TabIndex = 0;
-            this.chBoxOnlyVisible.Text = "Только видимые";
-            this.chBoxOnlyVisible.UseVisualStyleBackColor = true;
-            // 
-            // pFindFrom
-            // 
-            this.pFindFrom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pFindFrom.Controls.Add(this.rBOnlyStars);
-            this.pFindFrom.Controls.Add(this.rBOnlyConstellations);
-            this.pFindFrom.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pFindFrom.Location = new System.Drawing.Point(366, 0);
-            this.pFindFrom.Name = "pFindFrom";
-            this.pFindFrom.Size = new System.Drawing.Size(180, 50);
-            this.pFindFrom.TabIndex = 8;
-            // 
-            // rBOnlyStars
-            // 
-            this.rBOnlyStars.AutoSize = true;
-            this.rBOnlyStars.Location = new System.Drawing.Point(108, 17);
-            this.rBOnlyStars.Name = "rBOnlyStars";
-            this.rBOnlyStars.Size = new System.Drawing.Size(64, 17);
-            this.rBOnlyStars.TabIndex = 1;
-            this.rBOnlyStars.Text = "Звёзды";
-            this.rBOnlyStars.UseVisualStyleBackColor = true;
-            // 
-            // rBOnlyConstellations
-            // 
-            this.rBOnlyConstellations.AutoSize = true;
-            this.rBOnlyConstellations.Checked = true;
-            this.rBOnlyConstellations.Location = new System.Drawing.Point(12, 16);
-            this.rBOnlyConstellations.Name = "rBOnlyConstellations";
-            this.rBOnlyConstellations.Size = new System.Drawing.Size(80, 17);
-            this.rBOnlyConstellations.TabIndex = 0;
-            this.rBOnlyConstellations.TabStop = true;
-            this.rBOnlyConstellations.Text = "Созвездия";
-            this.rBOnlyConstellations.UseVisualStyleBackColor = true;
-            // 
-            // bSave
-            // 
-            this.bSave.Location = new System.Drawing.Point(5, 94);
-            this.bSave.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.bSave.Name = "bSave";
-            this.bSave.Size = new System.Drawing.Size(220, 29);
-            this.bSave.TabIndex = 12;
-            this.bSave.Text = "Сохранить все изменения";
-            this.bSave.UseVisualStyleBackColor = true;
-            this.bSave.Click += new System.EventHandler(this.bSave_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -513,14 +513,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.numLongtitudeDegree)).EndInit();
             this.pSearch.ResumeLayout(false);
             this.pSearch.PerformLayout();
-            this.pMain.ResumeLayout(false);
-            this.pMain.PerformLayout();
-            this.pSortedBy.ResumeLayout(false);
-            this.pSortedBy.PerformLayout();
-            this.pFilters.ResumeLayout(false);
-            this.pFilters.PerformLayout();
             this.pFindFrom.ResumeLayout(false);
             this.pFindFrom.PerformLayout();
+            this.pFilters.ResumeLayout(false);
+            this.pFilters.PerformLayout();
+            this.pSortedBy.ResumeLayout(false);
+            this.pSortedBy.PerformLayout();
+            this.pMain.ResumeLayout(false);
+            this.pMain.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -88,7 +88,7 @@ namespace Astronomer_s_Handbook
             }
         }
 
-        // Сохраняет всю информацию
+        // Сохраняет всю информацию.
         private bool SaveAllData()
         {
             List<bool> res = new List<bool>();

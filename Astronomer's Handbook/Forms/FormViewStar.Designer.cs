@@ -50,17 +50,17 @@
             this.fLPVisibility = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTitleVisibility = new System.Windows.Forms.Label();
             this.lblVisibility = new System.Windows.Forms.Label();
-            this.pLeft = new System.Windows.Forms.Panel();
-            this.pHeader = new System.Windows.Forms.Panel();
-            this.bEdit = new System.Windows.Forms.Button();
-            this.lblName = new System.Windows.Forms.Label();
-            this.pBoxPhoto = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTitleAzimuth = new System.Windows.Forms.Label();
             this.lblAzimuth = new System.Windows.Forms.Label();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTitleAltitude = new System.Windows.Forms.Label();
             this.lblAltitude = new System.Windows.Forms.Label();
+            this.pLeft = new System.Windows.Forms.Panel();
+            this.pHeader = new System.Windows.Forms.Panel();
+            this.bEdit = new System.Windows.Forms.Button();
+            this.lblName = new System.Windows.Forms.Label();
+            this.pBoxPhoto = new System.Windows.Forms.PictureBox();
             this.flowLPParams.SuspendLayout();
             this.fLPConstellation.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -69,10 +69,10 @@
             this.flowLayoutPanel5.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.fLPVisibility.SuspendLayout();
-            this.pHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBoxPhoto)).BeginInit();
             this.flowLayoutPanel6.SuspendLayout();
             this.flowLayoutPanel7.SuspendLayout();
+            this.pHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLPParams
@@ -310,59 +310,6 @@
             this.lblVisibility.TabIndex = 1;
             this.lblVisibility.Text = "Здесь и сейчас звезду не видно";
             // 
-            // pLeft
-            // 
-            this.pLeft.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pLeft.Location = new System.Drawing.Point(0, 199);
-            this.pLeft.Name = "pLeft";
-            this.pLeft.Size = new System.Drawing.Size(199, 362);
-            this.pLeft.TabIndex = 5;
-            // 
-            // pHeader
-            // 
-            this.pHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pHeader.Controls.Add(this.bEdit);
-            this.pHeader.Controls.Add(this.lblName);
-            this.pHeader.Controls.Add(this.pBoxPhoto);
-            this.pHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pHeader.Location = new System.Drawing.Point(0, 0);
-            this.pHeader.Name = "pHeader";
-            this.pHeader.Size = new System.Drawing.Size(840, 199);
-            this.pHeader.TabIndex = 4;
-            // 
-            // bEdit
-            // 
-            this.bEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bEdit.Location = new System.Drawing.Point(786, 12);
-            this.bEdit.Name = "bEdit";
-            this.bEdit.Size = new System.Drawing.Size(40, 40);
-            this.bEdit.TabIndex = 2;
-            this.bEdit.Text = "Edit";
-            this.bEdit.UseVisualStyleBackColor = true;
-            this.bEdit.Click += new System.EventHandler(this.bEdit_Click);
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblName.Location = new System.Drawing.Point(202, 150);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(120, 37);
-            this.lblName.TabIndex = 1;
-            this.lblName.Text = "Звезда";
-            // 
-            // pBoxPhoto
-            // 
-            this.pBoxPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBoxPhoto.Image = global::Astronomer_s_Handbook.Properties.Resources.star;
-            this.pBoxPhoto.Location = new System.Drawing.Point(12, 12);
-            this.pBoxPhoto.Name = "pBoxPhoto";
-            this.pBoxPhoto.Size = new System.Drawing.Size(175, 175);
-            this.pBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBoxPhoto.TabIndex = 0;
-            this.pBoxPhoto.TabStop = false;
-            // 
             // flowLayoutPanel6
             // 
             this.flowLayoutPanel6.Controls.Add(this.lblTitleAzimuth);
@@ -425,6 +372,59 @@
             this.lblAltitude.TabIndex = 1;
             this.lblAltitude.Text = "0°0\'0\'\'";
             // 
+            // pLeft
+            // 
+            this.pLeft.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pLeft.Location = new System.Drawing.Point(0, 199);
+            this.pLeft.Name = "pLeft";
+            this.pLeft.Size = new System.Drawing.Size(199, 362);
+            this.pLeft.TabIndex = 5;
+            // 
+            // pHeader
+            // 
+            this.pHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pHeader.Controls.Add(this.bEdit);
+            this.pHeader.Controls.Add(this.lblName);
+            this.pHeader.Controls.Add(this.pBoxPhoto);
+            this.pHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pHeader.Location = new System.Drawing.Point(0, 0);
+            this.pHeader.Name = "pHeader";
+            this.pHeader.Size = new System.Drawing.Size(840, 199);
+            this.pHeader.TabIndex = 4;
+            // 
+            // bEdit
+            // 
+            this.bEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bEdit.Location = new System.Drawing.Point(786, 12);
+            this.bEdit.Name = "bEdit";
+            this.bEdit.Size = new System.Drawing.Size(40, 40);
+            this.bEdit.TabIndex = 2;
+            this.bEdit.Text = "Edit";
+            this.bEdit.UseVisualStyleBackColor = true;
+            this.bEdit.Click += new System.EventHandler(this.bEdit_Click);
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblName.Location = new System.Drawing.Point(202, 150);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(120, 37);
+            this.lblName.TabIndex = 1;
+            this.lblName.Text = "Звезда";
+            // 
+            // pBoxPhoto
+            // 
+            this.pBoxPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBoxPhoto.Image = global::Astronomer_s_Handbook.Properties.Resources.star;
+            this.pBoxPhoto.Location = new System.Drawing.Point(12, 12);
+            this.pBoxPhoto.Name = "pBoxPhoto";
+            this.pBoxPhoto.Size = new System.Drawing.Size(175, 175);
+            this.pBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBoxPhoto.TabIndex = 0;
+            this.pBoxPhoto.TabStop = false;
+            // 
             // FormViewStar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -437,6 +437,7 @@
             this.Name = "FormViewStar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Описание звезды";
+            this.TopMost = true;
             this.flowLPParams.ResumeLayout(false);
             this.fLPConstellation.ResumeLayout(false);
             this.fLPConstellation.PerformLayout();
@@ -452,13 +453,13 @@
             this.flowLayoutPanel4.PerformLayout();
             this.fLPVisibility.ResumeLayout(false);
             this.fLPVisibility.PerformLayout();
-            this.pHeader.ResumeLayout(false);
-            this.pHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBoxPhoto)).EndInit();
             this.flowLayoutPanel6.ResumeLayout(false);
             this.flowLayoutPanel6.PerformLayout();
             this.flowLayoutPanel7.ResumeLayout(false);
             this.flowLayoutPanel7.PerformLayout();
+            this.pHeader.ResumeLayout(false);
+            this.pHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxPhoto)).EndInit();
             this.ResumeLayout(false);
 
         }

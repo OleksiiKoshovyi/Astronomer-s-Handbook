@@ -375,10 +375,13 @@ namespace Astronomer_s_Handbook
             double b3 = 3.707 * Math.Pow(10, -14);
             double r = b1 + b2 * TU - b3 * Math.Pow(TU, 2);
 
-            // Гринвиччское среднее звёздное время в радианах
+            // Гринвиччское среднее звёздное время в радианах.
             double S = S0 + r * (mjd - mjd0);
 
-            return GetDegFromRad(S);
+            // Гринвиччское среднее звёздное время в градусах.
+            double deg = GetDegFromRad(S);
+
+            return deg % 360;
         }
 
         #endregion
@@ -420,7 +423,7 @@ namespace Astronomer_s_Handbook
             //3.Часовой угол звезды и высота над горизонтом.
 
             // Часовой угол.
-            double Th = St - RA;
+            double Th = (St - RA)%360;
 
             // Cos(z) = Sin(Lat) * Sin(Dec) + Cos(Lat) * Cos(Dec) * Cos(Th).
             // Косинус зенитного угла.
@@ -439,7 +442,7 @@ namespace Astronomer_s_Handbook
 
             // Формируем координаты в горизонтальной системе координат.
             VerticalCord altitude = new VerticalCord(GetSecondsFromGeg(H));
-            HorizontalCord azimuth = new HorizontalCord(GetSecondsFromGeg(Th % 360));
+            HorizontalCord azimuth = new HorizontalCord(GetSecondsFromGeg(Th));
 
             return new HorizontalCS(altitude, azimuth);
         }

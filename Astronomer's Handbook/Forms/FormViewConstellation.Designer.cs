@@ -222,6 +222,7 @@
             this.Name = "FormViewConstellation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Описание созвездия";
+            this.TopMost = true;
             this.pHeader.ResumeLayout(false);
             this.pHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxPhoto)).EndInit();

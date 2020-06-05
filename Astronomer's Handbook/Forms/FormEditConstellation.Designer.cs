@@ -242,6 +242,7 @@
             this.Name = "FormEditConstellation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Создание созвездия";
+            this.TopMost = true;
             this.pHeader.ResumeLayout(false);
             this.pHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxPhoto)).EndInit();
