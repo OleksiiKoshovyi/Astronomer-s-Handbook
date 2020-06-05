@@ -423,7 +423,7 @@ namespace Astronomer_s_Handbook
             //3.Часовой угол звезды и высота над горизонтом.
 
             // Часовой угол.
-            double Th = (St - RA)%360;
+            double Th = (St - RA) % 360;
 
             // Cos(z) = Sin(Lat) * Sin(Dec) + Cos(Lat) * Cos(Dec) * Cos(Th).
             // Косинус зенитного угла.
@@ -440,9 +440,20 @@ namespace Astronomer_s_Handbook
             // Высота над горизонтом.
             double H = 90 - z;
 
+            // Az = atn2(Sin(Th) * Cos(Dec), (sin(H) * Sin(Lat) - Sin(Dec)) / Cos(Lat)).
+            // Азимут звезды в радианах.
+            double Az = Math.Atan2(
+                Math.Sin(GetRadFromDeg(Th))
+                * Math.Cos(GetRadFromDeg(Dec)),
+                ( Math.Sin(GetRadFromDeg(H)) * Math.Cos(GetRadFromDeg(Lat)) - Math.Sin(GetRadFromDeg(Dec)))
+                / Math.Cos(GetRadFromDeg(Lat)));
+
+            // Азимут звезды в градусах.
+            double az = GetDegFromRad(Az);
+
             // Формируем координаты в горизонтальной системе координат.
             VerticalCord altitude = new VerticalCord(GetSecondsFromGeg(H));
-            HorizontalCord azimuth = new HorizontalCord(GetSecondsFromGeg(Th));
+            HorizontalCord azimuth = new HorizontalCord(GetSecondsFromGeg(az));
 
             return new HorizontalCS(altitude, azimuth);
         }
